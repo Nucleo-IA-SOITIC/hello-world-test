@@ -6,6 +6,12 @@ export default function Home() {
     { name: "GitHub", status: "ok", icon: "◎" },
   ];
 
+  const now = new Date().toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
+    dateStyle: "short",
+    timeStyle: "short",
+  });
+
   return (
     <main className="container">
       <div className="badge">Nucleo IA · SOITIC</div>
@@ -29,6 +35,8 @@ export default function Home() {
 
       <div className="footer">
         Deploy automático via GitHub → Vercel &nbsp;·&nbsp; Dados via Supabase
+        <br />
+        <span style={{ opacity: 0.5 }}>Build: {now}</span>
       </div>
     </main>
   );
